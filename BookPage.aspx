@@ -100,7 +100,7 @@
                 <td class="auto-style7">Pages:</td>
                 <td class="auto-style12">
                     <asp:Literal ID="ltrPage" runat="server" Text="Page"></asp:Literal>
-                </td>
+                    s</td>
             </tr>
             <tr>
 
@@ -123,5 +123,7 @@
             </tr>
         </table>
     </form>
+    <p>
+        &nbsp;</p>
 </body>
 </html>
