@@ -83,7 +83,7 @@
             </tr>
             <tr>
                 
-                <td class="auto-style9">Genress:</td>
+                <td class="auto-style9">Genres:</td>
                 <td class="auto-style8">
                     <asp:Literal ID="ltrGenre" runat="server" Text="Genre"></asp:Literal>
                 </td>
