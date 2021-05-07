@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
-using System.Linq;
 using System.Web;
-using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -20,12 +18,15 @@ namespace BookHomePage
 
         }
 
-        protected void Load_ImageButtons(Object sender, EventArgs e, string [] ctgArray)
+        protected void Load_ImageButtons(Object sender, EventArgs e, string[] ctgArray)
         {
             OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
                                                       Server.MapPath("booksDb.mdb") + ";Persist Security Info=False");
-            ImageButton[] images = { ImageButton1, ImageButton2, ImageButton3, ImageButton4,
-                ImageButton5, ImageButton6, ImageButton7, ImageButton8 };
+            ImageButton[] images =
+            {
+                ImageButton1, ImageButton2, ImageButton3, ImageButton4,
+                ImageButton5, ImageButton6, ImageButton7, ImageButton8
+            };
 
             string query = "";
 
@@ -40,10 +41,11 @@ namespace BookHomePage
                 {
                     ctg += "and c." + ctgArray[i] + " = 1";
                 }
+
                 query = "select * from books b, category c where b.id = c.id " + ctg + " order by book_rating desc";
             }
 
-            
+
             string q = "select * from books b, category c where b.Id = c.Id and c.fantasy = 1";
             OleDbCommand cmd = new OleDbCommand(query, con);
             Console.WriteLine(query);
@@ -74,10 +76,19 @@ namespace BookHomePage
                 //throw ;
             }
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            string[] s = { };
-            Load_ImageButtons(sender, e, s);
+            if (IsPostBack & SearchBar.Text != "")
+            {
+                Response.Redirect("allRecommendations.aspx?&pn=1&search=" + SearchBar.Text);
+            }
+            else
+            {
+                string[] s = { };
+                Load_ImageButtons(sender, e, s);
+            }
+            
         }
 
         protected string[] SelectedCategories()
@@ -109,16 +120,19 @@ namespace BookHomePage
                 {
                     s += ctgArray[i] + "_";
                 }
-                
+
             }
+
             Response.Redirect("allRecommendations.aspx?pn=1&ctg=" + s);
         }
 
         public int GetImageButtonIndex(ImageButton imgbtn)
         {
-            ImageButton[] imageButtons = {
+            ImageButton[] imageButtons =
+            {
                 ImageButton1, ImageButton2, ImageButton3, ImageButton4, ImageButton5,
-                ImageButton6, ImageButton7, ImageButton8 };
+                ImageButton6, ImageButton7, ImageButton8
+            };
 
             for (int i = 0; i < imageButtons.Length; i++)
             {
@@ -127,8 +141,10 @@ namespace BookHomePage
                     return i;
                 }
             }
+
             return -1;
         }
+
         public int GetId(string url)
         {
             OleDbConnection con = GetConnection();
@@ -150,6 +166,7 @@ namespace BookHomePage
                 Console.WriteLine(e);
                 throw;
             }
+
             return id;
         }
 
@@ -186,10 +203,11 @@ namespace BookHomePage
 
 
         }
+
         protected void CheckBoxList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // TODO: Buraya yazacağuk
-            
+
             //cbList.Items[0].Text = "Changed a girdik";
             List<string> ctgList = new List<string>();
             for (int i = 0; i < cbList.Items.Count; i++)
@@ -209,7 +227,7 @@ namespace BookHomePage
 
         protected void SearchBar_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -221,6 +239,41 @@ namespace BookHomePage
         {
             string searchStr = SearchBar.Text;
             Response.Redirect("allRecommendations.aspx?&pn=1&search=" + searchStr);
+        }
+
+        [System.Web.Script.Services.ScriptMethod()]
+        [System.Web.Services.WebMethod]
+        public static List<string> GetTitleList(string prefixText, int count)
+        {
+            using (OleDbConnection con = new OleDbConnection())
+            {
+
+                con.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
+                                       HttpContext.Current.Server.MapPath("booksDB.mdb") +
+                                       ";Persist Security Info=False";
+                using (OleDbCommand com = new OleDbCommand())
+                {
+                    com.CommandText = "select book_title from books where " + "book_title like @Search + '%'";
+
+                    com.Parameters.AddWithValue("@Search", prefixText);
+                    com.Connection = con;
+                    con.Open();
+                    List<string> bookNames = new List<string>();
+
+                    int sdrCount = 0;
+                    using (OleDbDataReader sdr = com.ExecuteReader())
+                    {
+                        while (sdr.Read() & sdrCount < 5)
+                        {
+                            bookNames.Add(sdr["book_title"].ToString());
+                            sdrCount++;
+                        }
+                    }
+
+                    con.Close();
+                    return bookNames;
+                }
+            }
         }
     }
 }

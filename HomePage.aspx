@@ -1,11 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="BookHomePage.BookHomePage" %>
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>   
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <script type="text/javascript">
+        function autoCompleteEx_ItemSelected(sender, args) {
+            __doPostBack(sender.get_element().name, "");
+        }
+    </script>
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -21,6 +26,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods = "true">    
+    
+        </asp:ScriptManager> 
         <div>
             <table class="auto-style3">
                 <tr>
@@ -33,6 +41,10 @@
                 <tr>
                     <td class="auto-style2">
                         <asp:TextBox ID="SearchBar" runat="server" Width="1290px" OnTextChanged="SearchBar_TextChanged" ></asp:TextBox>
+                        <asp:AutoCompleteExtender ServiceMethod="GetTitleList" MinimumPrefixLength="1"    
+                                                  CompletionInterval="10" EnableCaching="false" CompletionSetCount="1" TargetControlID="SearchBar"    
+                                                  ID="AutoCompleteExtender1" runat="server" FirstRowSelected="false" OnClientItemSelected="autoCompleteEx_ItemSelected">    
+                        </asp:AutoCompleteExtender>  
 &nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="BtnSearch" runat="server" Text="Search" Width="149px" OnClick="BtnSearch_Click" />
                     </td>
