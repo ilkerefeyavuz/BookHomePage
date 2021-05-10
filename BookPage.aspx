@@ -57,12 +57,12 @@
                 <td class="auto-style10" rowspan="5">
                     <table class="auto-style2">
                         <tr>
-                            <td>
+                            <td align="center">
                                 <asp:Literal ID="ltrTitle" runat="server" Text="Title"></asp:Literal>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td align="center">
                                 <asp:Literal ID="ltrRate" runat="server" Text="Rate"></asp:Literal>
                                 (<asp:Literal ID="ltrRateCount" runat="server" Text="Count"></asp:Literal>
                                 )</td>
@@ -125,19 +125,19 @@
         <table class="auto-style2">
             <tr>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook1" runat="server" Height="150px" Width="100px" />
+                    <asp:ImageButton ID="RecBook1" runat="server" Height="150px" Width="100px"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook2" runat="server" Height="150px" Width="100px" />
+                    <asp:ImageButton ID="RecBook2" runat="server" Height="150px" Width="100px"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook3" runat="server" Height="150px" Width="100px" />
+                    <asp:ImageButton ID="RecBook3" runat="server" Height="150px" Width="100px"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook4" runat="server" Height="150px" Width="100px" />
+                    <asp:ImageButton ID="RecBook4" runat="server" Height="150px" Width="100px"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook5" runat="server" Height="150px" Width="100px" />
+                    <asp:ImageButton ID="RecBook5" runat="server" Height="150px" Width="100px"/>
                 </td>
             </tr>
         </table>
