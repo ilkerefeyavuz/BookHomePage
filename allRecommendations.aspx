@@ -23,17 +23,59 @@
                 </tr>
                 <tr>
                     <td>
+                        <table class="auto-style1">
+                            <tr>
+                                <td align="center">
                         <asp:ImageButton ID="ImageButton2" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton3" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton4" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton5" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton6" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton7" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click"/>
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton4" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton5" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton6" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton7" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton8" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton9" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton10" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton11" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton12" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton13" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton14" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton15" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                                <td align="center">
+                        <asp:ImageButton ID="ImageButton16" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
                 <tr>

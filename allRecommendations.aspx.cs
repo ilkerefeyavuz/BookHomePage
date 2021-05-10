@@ -83,7 +83,9 @@ namespace BookHomePage
             OleDbCommand cmd = new OleDbCommand(query, con);
 
             ImageButton[] imageButtons =
-                {ImageButton2, ImageButton3, ImageButton4, ImageButton5, ImageButton6, ImageButton7};
+                {ImageButton2, ImageButton3, ImageButton4, ImageButton5, ImageButton6, ImageButton7,
+                 ImageButton8, ImageButton9, ImageButton10, ImageButton11, ImageButton12, ImageButton13,
+                ImageButton14, ImageButton15, ImageButton16};
 
             try
             {
@@ -92,12 +94,12 @@ namespace BookHomePage
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
 
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < 15; i++)
                 {
                     ImageButton img = imageButtons[i];
-                    if ((pageNo-1)*6 + i < dataTable.Rows.Count)
+                    if ((pageNo-1)*15 + i < dataTable.Rows.Count)
                     {
-                        img.ImageUrl = dataTable.Rows[(pageNo - 1) * 6 + i]["image_url"].ToString();
+                        img.ImageUrl = dataTable.Rows[(pageNo - 1) * 15 + i]["image_url"].ToString();
                     }
                     else
                     {
@@ -138,8 +140,9 @@ namespace BookHomePage
         public int GetImageButtonIndex(ImageButton imgbtn)
         {
             ImageButton[] imageButtons = {
-                ImageButton2, ImageButton3, ImageButton4, ImageButton5,
-                ImageButton6, ImageButton7};
+                ImageButton2, ImageButton3, ImageButton4, ImageButton5, ImageButton6, ImageButton7,
+                ImageButton8, ImageButton9, ImageButton10, ImageButton11, ImageButton12, ImageButton13,
+                ImageButton14, ImageButton15, ImageButton16};
 
             for (int i = 0; i < imageButtons.Length; i++)
             {
