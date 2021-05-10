@@ -125,19 +125,19 @@
         <table class="auto-style2">
             <tr>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook1" runat="server" Height="150px" Width="100px"/>
+                    <asp:ImageButton ID="RecBook1" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook2" runat="server" Height="150px" Width="100px"/>
+                    <asp:ImageButton ID="RecBook2" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook3" runat="server" Height="150px" Width="100px"/>
+                    <asp:ImageButton ID="RecBook3" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook4" runat="server" Height="150px" Width="100px"/>
+                    <asp:ImageButton ID="RecBook4" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook5" runat="server" Height="150px" Width="100px"/>
+                    <asp:ImageButton ID="RecBook5" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
                 </td>
             </tr>
         </table>

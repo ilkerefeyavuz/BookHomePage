@@ -179,31 +179,6 @@ namespace BookHomePage
             int id = GetId(imgUrl);
             Response.Redirect("BookPage.aspx?id=" + id);
 
-            //OleDbConnection con = GetConnection(sender, e);
-            //string query = "select * from books where book_rating_count > 10 order by book_rating desc";
-            //OleDbCommand cmd = new OleDbCommand(query, con);
-
-            //try
-            //{
-            //    con.Open();
-            //    OleDbDataReader reader = cmd.ExecuteReader();
-            //    DataTable dataTable = new DataTable();
-            //    dataTable.Load(reader);
-            //    string imgUrl = ImageButton1.ImageUrl;
-            //    ImageButton imagebutton = (ImageButton) sender;
-
-            //    int rowindex = GetImageButtonIndex(imagebutton);
-
-            //    var id = dataTable.Rows[rowindex]["id"];
-            //    Response.Redirect("BookPage.aspx?id=" + id);
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(exception);
-            //    throw;
-            //}
-
-
         }
 
         protected void CheckBoxList1_SelectedIndexChanged(object sender, EventArgs e)

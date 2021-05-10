@@ -11,6 +11,13 @@ namespace BookHomePage
 {
     public partial class BookPage : System.Web.UI.Page
     {
+        protected OleDbConnection GetConnection()
+        {
+            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
+                                                      Server.MapPath("booksDb.mdb") + ";Persist Security Info=False");
+            return con;
+
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             var id = Request.QueryString["id"];
@@ -22,6 +29,8 @@ namespace BookHomePage
             string querycategory = "select * from category where id=" + id.ToString();
             OleDbCommand cmd = new OleDbCommand(query, con);
             OleDbCommand cmdctg = new OleDbCommand(querycategory, con);
+
+            ImageButton[] recButtons = {RecBook1, RecBook2, RecBook3, RecBook4, RecBook5};
 
             try
             {
@@ -46,17 +55,19 @@ namespace BookHomePage
 
                 string[] categories = { "Young_Adult", "Fiction", "Science_Fiction", "Fantasy", "Classics", "Romance", "Contemporary",
                     "Childrens", "Mystery", "Thriller", "Novels", "Philosophy", "Short_Stories", "Nonfiction", "Biography", "Horror", 
-                    "Christian", "Poetry", "Spirituality", "Religion", "Music", "Self_Help", "Business", "Urban" };
+                    "Christian", "Poetry", "Spirituality", "Religion", "Music", "Self_Help", "Urban" };
 
                 string s = "";
                 List<string> list = new List<string>();
-                
+                List<string> ktg = new List<string>();
 
                 for (int i = 0; i < categories.Length; i++)
                 {
+                    
                     string a = categories[i];
                     if(ctgTable.Rows[0][a].ToString() == "1")
                     {
+                        ktg.Add(a);
                         string sa = a.Trim().Replace("_", " ");
                         string nsa = "<a href='allRecommendations.aspx?&pn=1&ctg=" + sa + "'>" + sa +"</a>";
                         list.Add(nsa);
@@ -84,6 +95,34 @@ namespace BookHomePage
                 }
 
                 ltrGenre.Text = s;
+
+                int rCount = 0;
+                string queryReccommend1 = "select * from books b, category c where b.id = c.id";
+
+                string[] genreArr = ktg.ToArray();
+
+                for (int i = 0; i < genreArr.Length; i++)
+                {
+                    queryReccommend1 = queryReccommend1 + " and c." + genreArr[i] + "=1";
+                }
+
+                OleDbCommand recCmd = new OleDbCommand(queryReccommend1, con);
+                OleDbDataReader reader2 = recCmd.ExecuteReader();
+                DataTable recTable = new DataTable();
+                recTable.Load(reader2);
+
+
+                while (rCount < 5)
+                {
+                    for (int i = 0; i < 5; i++)
+                    {
+                        string img = recTable.Rows[i]["image_url"].ToString();
+                        recButtons[i].ImageUrl = img;
+                        rCount++;
+                    }
+                }
+                
+
             }
             catch (Exception exception)
             {
@@ -100,6 +139,40 @@ namespace BookHomePage
         protected void btnRating_Click(object sender, EventArgs e)
         {
             Response.Write("<script>alert('Yapamadım abi :(')</script>");
+        }
+
+        public int GetId(string url)
+        {
+            OleDbConnection con = GetConnection();
+            string query = "select id from books where image_url='" + url + "'";
+            OleDbCommand cmd = new OleDbCommand(query, con);
+            int id;
+            try
+            {
+                con.Open();
+                OleDbDataReader reader = cmd.ExecuteReader();
+                DataTable dataTable = new DataTable();
+                dataTable.Load(reader);
+                string data = dataTable.Rows[0]["id"].ToString();
+                id = int.Parse(data);
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            return id;
+        }
+
+        protected void ImageButton_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton imgButton = (ImageButton)sender;
+            string imgUrl = imgButton.ImageUrl;
+            int id = GetId(imgUrl);
+            Response.Redirect("BookPage.aspx?id=" + id);
+
         }
     }
 }
