@@ -25,7 +25,9 @@ namespace BookHomePage
             ImageButton[] images =
             {
                 ImageButton1, ImageButton2, ImageButton3, ImageButton4,
-                ImageButton5, ImageButton6, ImageButton7, ImageButton8
+                ImageButton5, ImageButton6, ImageButton7, ImageButton8,
+                ImageButton9, ImageButton10, ImageButton11, ImageButton12,
+                ImageButton13, ImageButton14, ImageButton15
             };
 
             string query = "";
@@ -130,7 +132,7 @@ namespace BookHomePage
         {
             ImageButton[] imageButtons =
             {
-                ImageButton1, ImageButton2, ImageButton3, ImageButton4, ImageButton5,
+                ImageButton1, ImageButton1, ImageButton3, ImageButton4, ImageButton5,
                 ImageButton6, ImageButton7, ImageButton8
             };
 

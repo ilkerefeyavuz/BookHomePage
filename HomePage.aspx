@@ -53,23 +53,61 @@
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recommendations:</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton1" runat="server" Height="150px" OnClick="ImageButton_Click" Width="100px" ImageUrl="https://images.gr-assets.com/books/1255614970l/2.jpg" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton2" runat="server" Height="150px" OnClick="ImageButton_Click" Width="100px" ImageUrl="https://images.gr-assets.com/books/1255614970l/2.jpg" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton3" runat="server" Height="150px" OnClick="ImageButton_Click" Width="100px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton4" runat="server" Height="150px" OnClick="ImageButton_Click" Width="100px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton5" runat="server" Height="150px" OnClick="ImageButton_Click" Width="100px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton6" runat="server" Height="150px" OnClick="ImageButton_Click" Width="100px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton7" runat="server" Height="150px" OnClick="ImageButton_Click" Width="100px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:ImageButton ID="ImageButton8" runat="server" Height="150px" OnClick="ImageButton_Click" Width="100px" />
-&nbsp;</td>
+                    <td>
+                        <table class="auto-style3">
+                            <tr>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton1" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click" />
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton2" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click" />
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton3" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton4" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton5" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton6" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton7" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton8" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton9" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton10" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton11" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton12" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton13" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton14" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                                <td align="center">
+                                    <asp:ImageButton ID="ImageButton15" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

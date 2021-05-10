@@ -92,7 +92,7 @@
                 
                 <td class="auto-style5">Description:</td>
                 <td class="auto-style4">
-                    <asp:TextBox ID="txtDesc" runat="server" Height="70px" TextMode="MultiLine" Width="250px"></asp:TextBox>
+                    <asp:TextBox ID="txtDesc" runat="server" Height="70px" TextMode="MultiLine" Width="250px" ReadOnly="True"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -122,8 +122,25 @@
                 </td>
             </tr>
         </table>
+        <table class="auto-style2">
+            <tr>
+                <td align="center">
+                    <asp:ImageButton ID="RecBook1" runat="server" Height="150px" Width="100px" />
+                </td>
+                <td align="center">
+                    <asp:ImageButton ID="RecBook2" runat="server" Height="150px" Width="100px" />
+                </td>
+                <td align="center">
+                    <asp:ImageButton ID="RecBook3" runat="server" Height="150px" Width="100px" />
+                </td>
+                <td align="center">
+                    <asp:ImageButton ID="RecBook4" runat="server" Height="150px" Width="100px" />
+                </td>
+                <td align="center">
+                    <asp:ImageButton ID="RecBook5" runat="server" Height="150px" Width="100px" />
+                </td>
+            </tr>
+        </table>
     </form>
-    <p>
-        &nbsp;</p>
-</body>
+    </body>
 </html>
