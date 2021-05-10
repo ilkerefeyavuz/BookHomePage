@@ -87,12 +87,38 @@ namespace BookHomePage
                  ImageButton8, ImageButton9, ImageButton10, ImageButton11, ImageButton12, ImageButton13,
                 ImageButton14, ImageButton15, ImageButton16};
 
+            Button[] pageButtons = {Button1, Button2, Button3, Button4, Button5};
+
             try
             {
                 con.Open();
                 OleDbDataReader reader = cmd.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
+
+                int totalPageNumber = (dataTable.Rows.Count / 15) + 1;
+
+                int med = pageNo;
+                if (med < 3)
+                {
+                    med = 3;
+                }
+                else if (med == totalPageNumber)
+                {
+                    med = med - 2;
+                }
+                else if (med + 1 >= totalPageNumber)
+                {
+                    med = med - 1;
+                }
+
+                for (int i = 0; i < 5; i++)
+                {
+                    if (i < totalPageNumber)
+                    {
+                        pageButtons[i].Text = (med-2+i).ToString();
+                    }
+                }
 
                 for (int i = 0; i < 15; i++)
                 {
@@ -199,63 +225,23 @@ namespace BookHomePage
             int id = GetId(imgUrl);
             Response.Redirect("BookPage.aspx?id=" + id);
 
-            //OleDbConnection con = GetConnection();
+        }
 
-            //string[] ctgArray = SelectedCategories();
+        protected void PageButtons_Click(object sender, EventArgs e)
+        {
+            string absoluteurl = HttpContext.Current.Request.Url.AbsoluteUri;
+            string[] part1 = absoluteurl.Split(new[] { "pn=" }, StringSplitOptions.None);
+            string a = part1[0];
+            string[] part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
+            string b = part2[1];
 
-            //string pn = Request.QueryString["pn"];
-            //int pageNo = int.Parse(pn);
+            Button btn = (Button) sender;
+            string pn = btn.Text;
 
-            //string queryString = "";
-            //for (int i = 0; i < ctgArray.Length; i++)
-            //{
-            //    string s = ctgArray[i];
-            //    s = s.Trim().Replace(" ", "_");
-            //    if (s != "" & s != " ")
-            //    {
-            //        queryString += "and c." + s + "=1 ";
-            //    }
+            string newPage = a + "&pn=" + pn + "&ctg=" + b;
 
-            //}
+            Response.Redirect(newPage);
 
-            //string query = "";
-
-            //if (ctgArray.Length == 0)
-            //{
-            //    string searchStr = Request.QueryString["search"];
-            //    query = query = "select * from books b, category c where b.id = c.id and book_title like '%" + searchStr + "%' order by book_rating desc"; ;
-            //}
-            //else
-            //{
-            //    query = "select * from books b, category c where b.id=c.id " + queryString +
-            //                   "order by book_rating desc, book_rating_count";
-            //}
-
-
-
-            ////string query = "select * from books where book_rating_count > 10 order by book_rating desc";
-            //OleDbCommand cmd = new OleDbCommand(query, con);
-
-            //try
-            //{
-            //    con.Open();
-            //    OleDbDataReader reader = cmd.ExecuteReader();
-            //    DataTable dataTable = new DataTable();
-            //    dataTable.Load(reader);
-
-            //    ImageButton imagebutton = (ImageButton)sender;
-            //    int rowindex = GetImageButtonIndex(imagebutton);
-
-            //    var id = dataTable.Rows[6*(pageNo-1)+rowindex]["b.id"];
-            //    //int id = GetId(imagebutton.ImageUrl);
-            //    Response.Redirect("BookPage.aspx?id=" + id);
-
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(exception);
-            //    throw;
-            //}
         }
     }
 }

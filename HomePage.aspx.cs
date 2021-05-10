@@ -76,11 +76,38 @@ namespace BookHomePage
             }
         }
 
+        public int GetIdWithTitle(string title)
+        {
+            OleDbConnection con = GetConnection();
+            string query = "select id from books where book_title='" + title + "'";
+            OleDbCommand cmd = new OleDbCommand(query, con);
+            try
+            {
+                con.Open();
+                OleDbDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                string no =  dt.Rows[0]["id"].ToString();
+                int id = int.Parse(no);
+                con.Close();
+                return id;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            return 0;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack & SearchBar.Text != "")
             {
-                Response.Redirect("allRecommendations.aspx?&pn=1&search=" + SearchBar.Text);
+                //Response.Redirect("allRecommendations.aspx?&pn=1&search=" + SearchBar.Text);
+                int id = GetIdWithTitle(SearchBar.Text);
+                Response.Redirect("BookPage.aspx?id=" + id);
+
             }
             else
             {

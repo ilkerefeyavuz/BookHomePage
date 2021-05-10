@@ -116,8 +116,15 @@ namespace BookHomePage
                 {
                     for (int i = 0; i < 5; i++)
                     {
-                        string img = recTable.Rows[i]["image_url"].ToString();
-                        recButtons[i].ImageUrl = img;
+                        if (i < recTable.Rows.Count)
+                        {
+                            string img = recTable.Rows[i]["image_url"].ToString();
+                            recButtons[i].ImageUrl = img;
+                        }
+                        else
+                        {
+                            recButtons[i].Visible = false;
+                        }
                         rCount++;
                     }
                 }
