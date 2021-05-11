@@ -87,6 +87,13 @@ namespace BookHomePage
                  ImageButton8, ImageButton9, ImageButton10, ImageButton11, ImageButton12, ImageButton13,
                 ImageButton14, ImageButton15, ImageButton16};
 
+            Literal[] titles =
+            {
+                ltrBookName1, ltrBookName2, ltrBookName3, ltrBookName4, ltrBookName5, ltrBookName6, ltrBookName7,
+                ltrBookName8, ltrBookName9, ltrBookName10, ltrBookName11, ltrBookName12, ltrBookName13, ltrBookName14,
+                ltrBookName15
+            };
+
             Button[] pageButtons = {Button1, Button2, Button3, Button4, Button5};
 
             try
@@ -97,6 +104,8 @@ namespace BookHomePage
                 dataTable.Load(reader);
 
                 int totalPageNumber = (dataTable.Rows.Count / 15) + 1;
+
+                Session["totalPageNumber"] = totalPageNumber;
 
                 int med = pageNo;
                 if (med < 3)
@@ -123,13 +132,16 @@ namespace BookHomePage
                 for (int i = 0; i < 15; i++)
                 {
                     ImageButton img = imageButtons[i];
+                    Literal title = titles[i];
                     if ((pageNo-1)*15 + i < dataTable.Rows.Count)
                     {
                         img.ImageUrl = dataTable.Rows[(pageNo - 1) * 15 + i]["image_url"].ToString();
+                        title.Text = dataTable.Rows[(pageNo - 1) * 15 + i]["book_title"].ToString();
                     }
                     else
                     {
                         img.Visible = false;
+                        title.Visible = false;
                     }
                     
                 }
@@ -265,8 +277,11 @@ namespace BookHomePage
             string[] part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
             string b = part2[1];
 
+            var pn = Session["totalPageNumber"];
+            int pageNo = (int) pn;
+
             //string newPage = a + "&pn=" + (TotalPage) + "&ctg=" + b;
-            string newPage = a + "&pn=" + 1 + "&ctg=" + b;
+            string newPage = a + "&pn=" + pageNo + "&ctg=" + b;
 
             Response.Redirect(newPage);
         }

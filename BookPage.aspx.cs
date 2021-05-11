@@ -97,7 +97,7 @@ namespace BookHomePage
                 ltrGenre.Text = s;
 
                 int rCount = 0;
-                string queryReccommend1 = "select * from books b, category c where b.id = c.id";
+                string queryReccommend1 = "select * from books b, category c where b.id = c.id and b.id <> " + id.ToString();
 
                 string[] genreArr = ktg.ToArray();
 
