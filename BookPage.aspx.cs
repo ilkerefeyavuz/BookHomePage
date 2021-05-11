@@ -45,9 +45,30 @@ namespace BookHomePage
                 imgBook.ImageUrl = dataTable.Rows[0]["image_url"].ToString();
                 txtDesc.Text = dataTable.Rows[0]["book_desc"].ToString();
                 ltrPage.Text = dataTable.Rows[0]["book_pages"].ToString();
+
                 ltrTitle.Text = dataTable.Rows[0]["book_title"].ToString();
-                ltrRate.Text = dataTable.Rows[0]["book_rating"].ToString();
-                ltrRateCount.Text = dataTable.Rows[0]["book_rating_count"].ToString();
+                //ltrRate.Text = dataTable.Rows[0]["book_rating"].ToString();
+                //ltrRateCount.Text = dataTable.Rows[0]["book_rating_count"].ToString();
+
+                string dRating = dataTable.Rows[0]["book_rating"].ToString();
+                double rating = double.Parse(dRating);
+                string dRCount = dataTable.Rows[0]["book_rating_count"].ToString();
+                double ratingcount = double.Parse(dRCount);
+
+                Session["rating"] = rating;
+                Session["rating_count"] = ratingcount;
+                rating = (rating * 100) / 100;
+
+                ltrRate.Text = rating.ToString();
+                ltrRateCount.Text = dRCount;
+
+                Literal1.Text = (rating * ratingcount).ToString();
+                ratingcount = ratingcount+4;
+                double mult = rating * ratingcount;
+                mult = mult + 20;
+                double value = (mult) / ratingcount;
+                value = Math.Floor(value * 100) / 100;
+                Literal2.Text = (value).ToString();
 
                 OleDbDataReader ctgReader = cmdctg.ExecuteReader();
                 DataTable ctgTable = new DataTable();
@@ -145,14 +166,45 @@ namespace BookHomePage
 
         protected void btnRating_Click(object sender, EventArgs e)
         {
-            if (DropDownRate.SelectedItem.Value == "--Point--")
+
+            if (DropDownRate.SelectedValue == "0")
             {
                 Response.Write("<script>alert('Invalid Rate! Please try again...')</script>");
             }
-            else if (DropDownRate.SelectedItem.Value != "--Point--")
+            else
             {
+                //OleDbConnection con = GetConnection();
+                //var id = Request.QueryString["id"];
+                ////string query = "Insert Into books(book_rating, book_rating_count)" +
+                ////               " Values( @br, @brc) where id=" + id.ToString() + ";";
+                ////OleDbCommand cmd = new OleDbCommand(query, con);
+                //var drating = Session["rating"];
+                //var dratingcount = Session["rating_count"];
+                //double rating = (double) drating;
+                //double ratingCount = (double) dratingcount;
+
+                //string query = "Insert Into books(book_rating, book_rating_count) Values( " + 
+                //               rating + ", " + ratingCount+
+                //               ") where id=" + id.ToString() + ";";
+                //OleDbCommand cmd = new OleDbCommand(query, con);
+
+                ////cmd.Parameters.AddWithValue("@br", rating);
+                ////cmd.Parameters.AddWithValue("@brc", ratingCount);
+                //try
+                //{
+                //    con.Open();
+                //    cmd.ExecuteNonQuery();
+                //    con.Close();
+                //}
+                //catch (Exception exception)
+                //{
+                //    Console.WriteLine(exception);
+                //    throw;
+                //}
+                Response.Write("<script>alert('" + DropDownRate.SelectedItem.Text + " Your vote is successful!" +
+                               "')</script>");
                 //Calculating Rate
-                Response.Write("<script>alert('Your vote is successful!')</script>");
+                //Response.Write("<script>alert('Your vote is successful!')</script>");
             }
         }
 

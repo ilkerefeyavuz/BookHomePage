@@ -100,6 +100,9 @@
                 <td class="auto-style7">Page:</td>
                 <td class="auto-style12">
                     <asp:Literal ID="ltrPage" runat="server" Text="Page"></asp:Literal>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+&nbsp;<asp:Literal ID="Literal2" runat="server"></asp:Literal>
                     </td>
             </tr>
             <tr>
@@ -108,12 +111,12 @@
                 <td class="auto-style6">
                 <td class="auto-style13">
                     <asp:DropDownList ID="DropDownRate" runat="server">
-                        <asp:ListItem>--Points--</asp:ListItem>
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                        <asp:ListItem>4</asp:ListItem>
-                        <asp:ListItem>5</asp:ListItem>
+                        <asp:ListItem Value="0">--Points--</asp:ListItem>
+                        <asp:ListItem Value="1">1</asp:ListItem>
+                        <asp:ListItem Value="2">2</asp:ListItem>
+                        <asp:ListItem Value="3">3</asp:ListItem>
+                        <asp:ListItem Value="4">4</asp:ListItem>
+                        <asp:ListItem Value="5">5</asp:ListItem>
                     </asp:DropDownList>
                     &nbsp;
                     <asp:Button ID="btnRating" runat="server" OnClick="btnRating_Click" Text="Rating" />
