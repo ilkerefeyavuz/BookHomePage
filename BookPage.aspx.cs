@@ -145,7 +145,15 @@ namespace BookHomePage
 
         protected void btnRating_Click(object sender, EventArgs e)
         {
-            Response.Write("<script>alert('Invalid Rate! Please try again...')</script>");
+            if (DropDownRate.SelectedItem.Value == "--Point--")
+            {
+                Response.Write("<script>alert('Invalid Rate! Please try again...')</script>");
+            }
+            else if (DropDownRate.SelectedItem.Value != "--Point--")
+            {
+                //Calculating Rate
+                Response.Write("<script>alert('Your vote is successful!')</script>");
+            }
         }
 
         public int GetId(string url)

@@ -96,13 +96,13 @@ namespace BookHomePage
         protected global::System.Web.UI.WebControls.Literal ltrPage;
 
         /// <summary>
-        /// DropDownList1 denetimi.
+        /// DropDownRate denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik üretilmiş alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownRate;
 
         /// <summary>
         /// btnRating denetimi.

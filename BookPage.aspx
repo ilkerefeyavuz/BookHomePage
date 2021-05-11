@@ -70,8 +70,8 @@
                     </table>
                     <table class="auto-style11">
                         <tr>
-                            <td>
-                                <asp:Image ID="imgBook" runat="server" Height="230px" ImageUrl="https://images.gr-assets.com/books/1255614970l/2.jpg" Width="184px" />
+                            <td align="center">
+                                <asp:Image ID="imgBook" runat="server" Height="300px" ImageUrl="https://images.gr-assets.com/books/1255614970l/2.jpg" Width="180px" />
                             </td>
                         </tr>
                     </table>
@@ -92,7 +92,7 @@
                 
                 <td class="auto-style5">Description:</td>
                 <td class="auto-style4">
-                    <asp:TextBox ID="txtDesc" runat="server" Height="70px" TextMode="MultiLine" Width="250px" ReadOnly="True"></asp:TextBox>
+                    <asp:TextBox ID="txtDesc" runat="server" Height="120px" TextMode="MultiLine" Width="333px" ReadOnly="True"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -107,7 +107,7 @@
                 
                 <td class="auto-style6">
                 <td class="auto-style13">
-                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:DropDownList ID="DropDownRate" runat="server">
                         <asp:ListItem>--Points--</asp:ListItem>
                         <asp:ListItem>1</asp:ListItem>
                         <asp:ListItem>2</asp:ListItem>
@@ -125,19 +125,19 @@
         <table class="auto-style2">
             <tr>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook1" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                    <asp:ImageButton ID="RecBook1" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook2" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                    <asp:ImageButton ID="RecBook2" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook3" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                    <asp:ImageButton ID="RecBook3" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook4" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                    <asp:ImageButton ID="RecBook4" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook5" runat="server" Height="150px" Width="100px" OnClick="ImageButton_Click"/>
+                    <asp:ImageButton ID="RecBook5" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
             </tr>
         </table>
