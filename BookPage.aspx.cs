@@ -57,7 +57,8 @@ namespace BookHomePage
 
                 Session["rating"] = rating;
                 Session["rating_count"] = ratingcount;
-                rating = (rating * 100) / 100;
+                //rating = (rating * 100) / 100;
+                rating = Math.Round(rating, 2);
 
                 ltrRate.Text = rating.ToString();
                 ltrRateCount.Text = dRCount;
@@ -173,34 +174,36 @@ namespace BookHomePage
             }
             else
             {
-                //OleDbConnection con = GetConnection();
-                //var id = Request.QueryString["id"];
-                ////string query = "Insert Into books(book_rating, book_rating_count)" +
-                ////               " Values( @br, @brc) where id=" + id.ToString() + ";";
-                ////OleDbCommand cmd = new OleDbCommand(query, con);
-                //var drating = Session["rating"];
-                //var dratingcount = Session["rating_count"];
-                //double rating = (double) drating;
-                //double ratingCount = (double) dratingcount;
-
-                //string query = "Insert Into books(book_rating, book_rating_count) Values( " + 
-                //               rating + ", " + ratingCount+
-                //               ") where id=" + id.ToString() + ";";
+                OleDbConnection con = GetConnection();
+                var id = Request.QueryString["id"];
+                //string query = "Insert Into books(book_rating, book_rating_count)" +
+                //               " Values( @br, @brc) where id=" + id.ToString() + ";";
                 //OleDbCommand cmd = new OleDbCommand(query, con);
+                var drating = Session["rating"];
+                var dratingcount = Session["rating_count"];
+                double rating = (double)drating;
+                double ratingCount = (double)dratingcount;
+                double totalRating = rating * ratingCount;
+                ratingCount++;
+                rating = totalRating / ratingCount;
+                
 
-                ////cmd.Parameters.AddWithValue("@br", rating);
-                ////cmd.Parameters.AddWithValue("@brc", ratingCount);
-                //try
-                //{
-                //    con.Open();
-                //    cmd.ExecuteNonQuery();
-                //    con.Close();
-                //}
-                //catch (Exception exception)
-                //{
-                //    Console.WriteLine(exception);
-                //    throw;
-                //}
+                string query = "Update books set book_rating = @br ,book_rating_count = @brc where id=" + id.ToString() + ";";
+                OleDbCommand cmd = new OleDbCommand(query, con);
+
+                cmd.Parameters.AddWithValue("@br", rating);
+                cmd.Parameters.AddWithValue("@brc", ratingCount);
+                try
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception);
+                    throw;
+                }
                 Response.Write("<script>alert('" + DropDownRate.SelectedItem.Text + " Your vote is successful!" +
                                "')</script>");
                 //Calculating Rate
