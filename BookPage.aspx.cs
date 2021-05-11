@@ -145,7 +145,7 @@ namespace BookHomePage
 
         protected void btnRating_Click(object sender, EventArgs e)
         {
-            Response.Write("<script>alert('Yapamadım abi :(')</script>");
+            Response.Write("<script>alert('Invalid Rate! Please try again...')</script>");
         }
 
         public int GetId(string url)

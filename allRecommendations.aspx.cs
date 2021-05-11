@@ -243,5 +243,32 @@ namespace BookHomePage
             Response.Redirect(newPage);
 
         }
+
+        protected void ButtonFirst_Click(object sender, EventArgs e)
+        {
+            string absoluteurl = HttpContext.Current.Request.Url.AbsoluteUri;
+            string[] part1 = absoluteurl.Split(new[] { "pn=" }, StringSplitOptions.None);
+            string a = part1[0];
+            string[] part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
+            string b = part2[1];
+
+            string newPage = a + "&pn=" + 1 + "&ctg=" + b;
+
+            Response.Redirect(newPage);
+        }
+
+        protected void ButtonLast_Click(object sender, EventArgs e)
+        {
+            string absoluteurl = HttpContext.Current.Request.Url.AbsoluteUri;
+            string[] part1 = absoluteurl.Split(new[] { "pn=" }, StringSplitOptions.None);
+            string a = part1[0];
+            string[] part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
+            string b = part2[1];
+
+            //string newPage = a + "&pn=" + (TotalPage) + "&ctg=" + b;
+            string newPage = a + "&pn=" + 1 + "&ctg=" + b;
+
+            Response.Redirect(newPage);
+        }
     }
 }
