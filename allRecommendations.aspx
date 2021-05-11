@@ -28,81 +28,81 @@
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName1" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton2" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName2" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton3" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName3" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton4" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton4" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName4" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton5" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton5" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName5" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton6" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton6" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                             </tr>
                             <tr>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName6" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton7" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton7" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName7" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton8" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton8" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName8" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton9" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton9" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName9" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton10" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton10" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName10" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton11" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton11" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                             </tr>
                             <tr>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName11" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton12" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton12" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName12" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton13" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton13" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName13" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton14" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton14" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName14" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton15" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton15" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                                 <td align="center">
                                     <asp:Literal ID="ltrBookName15" runat="server"></asp:Literal>
                                     <br />
-                        <asp:ImageButton ID="ImageButton16" runat="server" Height="150px" Width="100px" OnClick="ImageButtons_Click" />
+                        <asp:ImageButton ID="ImageButton16" runat="server" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                             </tr>
                         </table>

@@ -85,8 +85,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="1" align="center" class="auto-style4">
+                    <td colspan="1" class="auto-style4">
                         <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Categories:</td>
+                </tr>
+                <tr>
+                    <td colspan="1" align="center" class="auto-style4">
                         <asp:CheckBoxList ID="cbList" runat="server" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged" Width="1288px" RepeatColumns="8">
                             <asp:ListItem Text="Fantasy" Value="1"></asp:ListItem>
                             <asp:ListItem>Classics</asp:ListItem>
@@ -113,7 +117,7 @@
                             <asp:ListItem>Business</asp:ListItem>
                             <asp:ListItem>Urban</asp:ListItem>
                         </asp:CheckBoxList>
-                    &nbsp;</td>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="1" align="right" class="auto-style4">
