@@ -205,7 +205,7 @@ namespace BookHomePage
                     throw;
                 }
                 Response.Write("<script>alert('" + DropDownRate.SelectedItem.Text + " Your vote is successful!" +
-                               "')</script>");
+                               "');document.reload();</script>");
                 //Calculating Rate
                 //Response.Write("<script>alert('Your vote is successful!')</script>");
             }
