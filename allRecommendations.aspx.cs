@@ -103,29 +103,57 @@ namespace BookHomePage
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
 
-                int totalPageNumber = (dataTable.Rows.Count / 15) + 1;
+
+                int totalPageNumber;
+                if (dataTable.Rows.Count % 15 == 0)
+                {
+                    totalPageNumber = (dataTable.Rows.Count / 15);
+                }
+                else
+                {
+                    totalPageNumber = (dataTable.Rows.Count / 15) + 1;
+                }
 
                 Session["totalPageNumber"] = totalPageNumber;
 
-                int med = pageNo;
-                if (med < 3)
+                if (totalPageNumber >= 5)
                 {
-                    med = 3;
-                }
-                else if (med == totalPageNumber)
-                {
-                    med = med - 2;
-                }
-                else if (med + 1 >= totalPageNumber)
-                {
-                    med = med - 1;
-                }
-
-                for (int i = 0; i < 5; i++)
-                {
-                    if (i < totalPageNumber)
+                    int med = pageNo;
+                    if (med < 3)
                     {
-                        pageButtons[i].Text = (med-2+i).ToString();
+                        med = 3;
+                    }
+                    else if (med == totalPageNumber)
+                    {
+                        med = med - 2;
+                    }
+                    else if (med + 1 >= totalPageNumber)
+                    {
+                        med = med - 1;
+                    }
+
+                    for (int i = 0; i < 5; i++)
+                    {
+                        if (i < totalPageNumber)
+                        {
+                            pageButtons[i].Text = (med - 2 + i).ToString();
+                        }
+                    }
+
+                }
+                else
+                {
+
+                    for (int i = 0; i < 5; i++)
+                    {
+                        if (i+1 <= totalPageNumber)
+                        {
+                            pageButtons[i].Text = (i+1).ToString();
+                        }
+                        else
+                        {
+                            pageButtons[i].Visible = false;
+                        }
                     }
                 }
 
@@ -133,7 +161,7 @@ namespace BookHomePage
                 {
                     ImageButton img = imageButtons[i];
                     Literal title = titles[i];
-                    if ((pageNo-1)*15 + i < dataTable.Rows.Count)
+                    if ((pageNo - 1) * 15 + i < dataTable.Rows.Count)
                     {
                         img.ImageUrl = dataTable.Rows[(pageNo - 1) * 15 + i]["image_url"].ToString();
                         title.Text = dataTable.Rows[(pageNo - 1) * 15 + i]["book_title"].ToString();
@@ -143,9 +171,10 @@ namespace BookHomePage
                         img.Visible = false;
                         title.Visible = false;
                     }
-                    
+
                 }
-                
+
+
                 con.Close();
             }
             catch (Exception exception)

@@ -184,9 +184,13 @@ namespace BookHomePage
                 double rating = (double)drating;
                 double ratingCount = (double)dratingcount;
                 double totalRating = rating * ratingCount;
+
+                string a = DropDownRate.SelectedValue;
+                int r = int.Parse(a);
+                Literal1.Text = a.ToString();
+                totalRating += r;
                 ratingCount++;
                 rating = totalRating / ratingCount;
-                
 
                 string query = "Update books set book_rating = @br ,book_rating_count = @brc where id=" + id.ToString() + ";";
                 OleDbCommand cmd = new OleDbCommand(query, con);
@@ -205,9 +209,11 @@ namespace BookHomePage
                     throw;
                 }
                 Response.Write("<script>alert('" + DropDownRate.SelectedItem.Text + " Your vote is successful!" +
-                               "');document.reload();</script>");
-                //Calculating Rate
-                //Response.Write("<script>alert('Your vote is successful!')</script>");
+                               "');</script>");
+
+                Page_Load(sender, e);
+
+                
             }
         }
 
