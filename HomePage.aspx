@@ -11,6 +11,18 @@
             __doPostBack(sender.get_element().name, "");
         }
     </script>
+    <script type = "text/javascript">
+        function searchRecommend() {
+
+            var txt = document.getElementById("<%=SearchBar.ClientID%>").value;
+            if (txt == "") {
+                alert("Please be sure search bar is not empty.");
+            }
+            else {
+                window.location = "allRecommendations.aspx?&pn=1&search=" + txt;
+            }
+        }
+    </script>
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -29,7 +41,9 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <div style="
+        background-color:lightslategray;">
+        <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods = "true">    
     
         </asp:ScriptManager> 
@@ -37,7 +51,7 @@
             <table class="auto-style3">
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Image ID="imgLogo" runat="server" Height="110px" ImageUrl="~/logo_hd.jpg" Width="1298px" />
+                        <asp:Image ID="imgLogo" runat="server" Height="110px" ImageUrl="~/logo_hd.jpg" Width="1455px" />
                     </td>
                 </tr>
             </table>
@@ -50,7 +64,7 @@
                                                   ID="AutoCompleteExtender1" runat="server" FirstRowSelected="false" OnClientItemSelected="autoCompleteEx_ItemSelected">    
                         </asp:AutoCompleteExtender>  
 &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="BtnSearch" runat="server" Text="Search" Width="149px" OnClick="BtnSearch_Click" />
+                        <asp:Button ID="BtnSearch" runat="server" Text="Search" Width="149px" OnClick="BtnSearch_Click" OnClientClick="searchRecommend(); return false" />
                     </td>
                 </tr>
                 <tr>
@@ -127,5 +141,7 @@
             </table>
         </div>
     </form>
+    </div>
+    
 </body>
 </html>

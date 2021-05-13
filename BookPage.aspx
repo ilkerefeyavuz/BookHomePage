@@ -54,7 +54,9 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <div style="
+        background-color:lightslategray;">
+        <form id="form1" runat="server">
         <table class="auto-style2">
             <tr>
                 <td class="auto-style10" rowspan="5">
@@ -95,7 +97,7 @@
                 
                 <td class="auto-style5">Description:</td>
                 <td class="auto-style4">
-                    <asp:TextBox ID="txtDesc" runat="server" Height="120px" TextMode="MultiLine" Width="333px" ReadOnly="True"></asp:TextBox>
+                    <asp:TextBox ID="txtDesc" runat="server" Height="120px" TextMode="MultiLine" Width="481px" ReadOnly="True"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -153,5 +155,7 @@
             </tr>
         </table>
     </form>
+    </div>
+    
     </body>
 </html>
