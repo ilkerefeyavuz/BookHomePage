@@ -14,7 +14,7 @@
 </head>
 <body>
     <div style="
-        position:fixed;
+        
         height:100vw;
         width:120vw;
         margin: -10px -19px -19px -8px;
