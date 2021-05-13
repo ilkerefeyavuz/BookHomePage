@@ -58,7 +58,7 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2"  align="center">
-                        <asp:TextBox ID="SearchBar" runat="server" Width="1290px" OnTextChanged="SearchBar_TextChanged" ></asp:TextBox>
+                        <asp:TextBox ID="SearchBar" runat="server" Width="1290px" placeholder="Please Type the Book's Name..." OnTextChanged="SearchBar_TextChanged" ></asp:TextBox>
                         <asp:AutoCompleteExtender ServiceMethod="GetTitleList" MinimumPrefixLength="1"    
                                                   CompletionInterval="10" EnableCaching="false" CompletionSetCount="1" TargetControlID="SearchBar"    
                                                   ID="AutoCompleteExtender1" runat="server" FirstRowSelected="false" OnClientItemSelected="autoCompleteEx_ItemSelected">    
