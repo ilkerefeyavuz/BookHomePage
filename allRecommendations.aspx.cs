@@ -280,13 +280,24 @@ namespace BookHomePage
             string absoluteurl = HttpContext.Current.Request.Url.AbsoluteUri;
             string[] part1 = absoluteurl.Split(new[] { "pn=" }, StringSplitOptions.None);
             string a = part1[0];
-            string[] part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
-            string b = part2[1];
-
-            Button btn = (Button) sender;
+            string[] part2 = {};
+            Button btn = (Button)sender;
             string pn = btn.Text;
+            string newPage = "";
+            string b = "";
 
-            string newPage = a + "&pn=" + pn + "&ctg=" + b;
+            if (absoluteurl.Contains("ctg="))
+            {
+                part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
+                b = part2[1];
+                newPage = a + "&pn=" + pn + "&ctg=" + b;
+            }
+            else if (absoluteurl.Contains("search="))
+            {
+                part2 = absoluteurl.Split(new[] { "search=" }, StringSplitOptions.None);
+                b = part2[1];
+                newPage = a + "&pn=" + pn + "&search=" + b;
+            }
 
             Response.Redirect(newPage);
 
