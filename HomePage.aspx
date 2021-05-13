@@ -41,7 +41,12 @@
     </style>
 </head>
 <body>
-    <div style="
+     <div style="
+        position:fixed;
+        height:100vw;
+        width:120vw;
+        margin: -10px -19px -19px -8px;
+        width:100%;
         background-color:lightslategray;">
         <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods = "true">    

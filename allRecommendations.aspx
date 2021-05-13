@@ -13,7 +13,14 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <div style="
+        position:fixed;
+        height:100vw;
+        width:120vw;
+        margin: -10px -19px -19px -8px;
+        width:100%;
+        background-color:lightslategray;">
+        <form id="form1" runat="server">
         <div>
             <table class="auto-style1">
                 <tr>
@@ -148,5 +155,7 @@
             </table>
         &nbsp;</div>
     </form>
+    </div>
+    
 </body>
 </html>

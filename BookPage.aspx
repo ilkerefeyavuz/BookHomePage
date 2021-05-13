@@ -55,6 +55,11 @@
 </head>
 <body>
     <div style="
+        position:fixed;
+        height:100vw;
+        width:120vw;
+        margin: -10px -19px -19px -8px;
+        width:100%;
         background-color:lightslategray;">
         <form id="form1" runat="server">
         <table class="auto-style2">
