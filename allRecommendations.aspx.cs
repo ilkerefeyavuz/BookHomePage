@@ -141,14 +141,21 @@ namespace BookHomePage
                     }
 
                 }
+                else if (totalPageNumber == 0)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(),
+                    "alert",
+                    "alert('There are no books in the category you selected');window.location ='HomePage.aspx';",
+                true);
+                }
                 else
                 {
 
                     for (int i = 0; i < 5; i++)
                     {
-                        if (i+1 <= totalPageNumber)
+                        if (i + 1 <= totalPageNumber)
                         {
-                            pageButtons[i].Text = (i+1).ToString();
+                            pageButtons[i].Text = (i + 1).ToString();
                         }
                         else
                         {

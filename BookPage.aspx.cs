@@ -63,13 +63,13 @@ namespace BookHomePage
                 ltrRate.Text = rating.ToString();
                 ltrRateCount.Text = dRCount;
 
-                Literal1.Text = (rating * ratingcount).ToString();
+                //Literal1.Text = (rating * ratingcount).ToString();
                 ratingcount = ratingcount+4;
                 double mult = rating * ratingcount;
                 mult = mult + 20;
                 double value = (mult) / ratingcount;
                 value = Math.Floor(value * 100) / 100;
-                Literal2.Text = (value).ToString();
+                //Literal2.Text = (value).ToString();
 
                 OleDbDataReader ctgReader = cmdctg.ExecuteReader();
                 DataTable ctgTable = new DataTable();
@@ -187,7 +187,7 @@ namespace BookHomePage
 
                 string a = DropDownRate.SelectedValue;
                 int r = int.Parse(a);
-                Literal1.Text = a.ToString();
+                //Literal1.Text = a.ToString();
                 totalRating += r;
                 ratingCount++;
                 rating = totalRating / ratingCount;

@@ -48,6 +48,9 @@
         .auto-style13 {
             width: 1517px;
         }
+        .auto-style14 {
+            height: 26px;
+        }
     </style>
 </head>
 <body>
@@ -57,7 +60,7 @@
                 <td class="auto-style10" rowspan="5">
                     <table class="auto-style2">
                         <tr>
-                            <td align="center">
+                            <td align="center" class="auto-style14">
                                 <asp:Literal ID="ltrTitle" runat="server" Text="Title"></asp:Literal>
                             </td>
                         </tr>
@@ -100,9 +103,6 @@
                 <td class="auto-style7">Page:</td>
                 <td class="auto-style12">
                     <asp:Literal ID="ltrPage" runat="server" Text="Page"></asp:Literal>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
-&nbsp;<asp:Literal ID="Literal2" runat="server"></asp:Literal>
                     </td>
             </tr>
             <tr>
@@ -123,6 +123,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnHomepage" runat="server" OnClick="btnHomepage_Click" Text="Home Page" />
                 </td>
+            </tr>
+        </table>
+        <table class="auto-style2">
+            <tr>
+                <td>
+                    <br />
+                    <br />
+                    Readers also enjoyed;</td>
             </tr>
         </table>
         <table class="auto-style2">
