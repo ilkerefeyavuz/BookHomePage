@@ -272,7 +272,7 @@ namespace BookHomePage
             string imgUrl = imgButton.ImageUrl;
             int id = GetId(imgUrl);
             Response.Redirect("BookPage.aspx?id=" + id);
-
+                
         }
 
         protected void PageButtons_Click(object sender, EventArgs e)

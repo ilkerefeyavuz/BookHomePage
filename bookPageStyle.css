@@ -1,0 +1,8 @@
+﻿body {
+    position: fixed;
+    height: 100vw;
+    width: 120vw;
+    margin: 0px 0px 0px 15px;
+    width: 100%;
+    background-color: lightslategray;
+}

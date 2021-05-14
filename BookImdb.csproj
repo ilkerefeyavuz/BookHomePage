@@ -71,9 +71,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="allRecommendations.aspx" />
+    <Content Include="allRecommendationsStyle.css" />
+    <Content Include="birdLogo.png" />
+    <Content Include="bookPageStyle.css" />
     <Content Include="booksDb.mdb" />
     <Content Include="HomePage.aspx" />
     <Content Include="BookPage.aspx" />
+    <Content Include="homePageLogo.png" />
+    <Content Include="homePageStyle.css" />
     <Content Include="hpLOGO.png" />
     <Content Include="logo_hd.jpg" />
     <Content Include="Web.config" />

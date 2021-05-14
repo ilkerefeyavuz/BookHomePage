@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+     <link rel="stylesheet" href="homePageStyle.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <script type="text/javascript">
@@ -24,6 +25,36 @@
         }
     </script>
     <style type="text/css">
+        .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  /*padding: 16px 32px;*/
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+.buttonShadow {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.buttonShadow:hover {
+  box-shadow: 0 28px 36px 0 rgba(0,0,0,0.24),0 34px 100px 0 rgba(0,0,0,0.5);
+}
         .auto-style1 {
             width: 100%;
             height: 319px;
@@ -41,13 +72,6 @@
     </style>
 </head>
 <body>
-     <div style="
-        position:fixed;
-        height:100vw;
-        width:120vw;
-        margin: -10px -19px -19px -8px;
-        width:100%;
-        background-color:lightslategray;">
         <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods = "true">    
     
@@ -56,7 +80,7 @@
             <table class="auto-style3">
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Image ID="imgLogo" runat="server" Height="110px" ImageUrl="~/logo_hd.jpg" Width="1455px" />
+                        <asp:Image ID="imgLogo" runat="server" Height="145px" ImageUrl="~/birdLogo.png" Width="262px" style="margin-left: 660px" />
                     </td>
                 </tr>
             </table>
@@ -69,7 +93,7 @@
                                                   ID="AutoCompleteExtender1" runat="server" FirstRowSelected="false" OnClientItemSelected="autoCompleteEx_ItemSelected">    
                         </asp:AutoCompleteExtender>  
 &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="BtnSearch" runat="server" Text="Search" Width="149px" OnClick="BtnSearch_Click" OnClientClick="searchRecommend(); return false" />
+                        <asp:Button ID="BtnSearch" class="button button5" runat="server" Text="Search" Width="149px" OnClick="BtnSearch_Click" OnClientClick="searchRecommend(); return false" />
                     </td>
                 </tr>
                 <tr>
@@ -80,19 +104,19 @@
                         <table class="auto-style3">
                             <tr>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton1" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click" />
+                                    <asp:ImageButton ID="ImageButton1" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click" />
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton2" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click" />
+                                    <asp:ImageButton ID="ImageButton2" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click" />
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton3" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                                    <asp:ImageButton ID="ImageButton3" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton4" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                                    <asp:ImageButton ID="ImageButton4" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton5" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                                    <asp:ImageButton ID="ImageButton5" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                                 </td>
                             </tr>
                         </table>
@@ -100,7 +124,7 @@
                 </tr>
                 <tr>
                     <td colspan="1" align="right" class="auto-style4">
-                        <asp:Button ID="btnShowAll" runat="server" OnClick="btnShowAll_Click" Text="Show All Recommendations" Width="213px" />
+                        <asp:Button ID="btnShowAll" class="button button5" runat="server" OnClick="btnShowAll_Click" Text="Show All Recommendations" Width="213px" />
                     </td>
                 </tr>
                 <tr>
@@ -140,13 +164,11 @@
                 </tr>
                 <tr>
                     <td colspan="1" align="right" class="auto-style4">
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Clear Choose" />
+                        <asp:Button ID="Button1" class="button button5" runat="server" OnClick="Button1_Click" Text="Clear Choose" />
                     </td>
                 </tr>
             </table>
         </div>
-    </form>
-    </div>
-    
+    </form>   
 </body>
 </html>

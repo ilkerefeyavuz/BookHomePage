@@ -4,9 +4,40 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="stylesheet" href="bookPageStyle.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
+        .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  /*padding: 16px 32px;*/
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+.buttonShadow {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.buttonShadow:hover {
+  box-shadow: 0 28px 36px 0 rgba(0,0,0,0.24),0 34px 100px 0 rgba(0,0,0,0.5);
+}
         .auto-style2 {
             width: 100%;
         }
@@ -54,13 +85,7 @@
     </style>
 </head>
 <body>
-    <div style="
-        position:fixed;
-        height:100vw;
-        width:120vw;
-        margin: -10px -19px -19px -8px;
-        width:100%;
-        background-color:lightslategray;">
+    
         <form id="form1" runat="server">
         <table class="auto-style2">
             <tr>
@@ -126,9 +151,9 @@
                         <asp:ListItem Value="5">5</asp:ListItem>
                     </asp:DropDownList>
                     &nbsp;
-                    <asp:Button ID="btnRating" runat="server" OnClick="btnRating_Click" Text="Rating" />
+                    <asp:Button ID="btnRating" class="button button5" runat="server" OnClick="btnRating_Click" Text="Rating" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnHomepage" runat="server" OnClick="btnHomepage_Click" Text="Home Page" />
+                    <asp:Button ID="btnHomepage" class="button button5" runat="server" OnClick="btnHomepage_Click" Text="Home Page" />
                 </td>
             </tr>
         </table>
@@ -143,24 +168,24 @@
         <table class="auto-style2">
             <tr>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook1" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                    <asp:ImageButton ID="RecBook1" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook2" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                    <asp:ImageButton ID="RecBook2" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook3" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                    <asp:ImageButton ID="RecBook3" class="button buttonShadow"  runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook4" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                    <asp:ImageButton ID="RecBook4" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">
-                    <asp:ImageButton ID="RecBook5" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                    <asp:ImageButton ID="RecBook5" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
             </tr>
         </table>
     </form>
-    </div>
+   
     
     </body>
 </html>
