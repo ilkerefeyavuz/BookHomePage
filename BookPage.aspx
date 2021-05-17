@@ -38,6 +38,9 @@
 .buttonShadow:hover {
   box-shadow: 0 28px 36px 0 rgba(0,0,0,0.24),0 34px 100px 0 rgba(0,0,0,0.5);
 }
+textarea {
+        resize: none;
+    }
         .auto-style2 {
             width: 100%;
         }
@@ -127,7 +130,8 @@
                 
                 <td class="auto-style5">Description:</td>
                 <td class="auto-style4">
-                    <asp:TextBox ID="txtDesc" runat="server" Height="120px" TextMode="MultiLine" Width="481px" ReadOnly="True"></asp:TextBox>
+                    <asp:TextBox ID="txtDesc" runat="server" Height="120px" TextMode="MultiLine" Width="481px" ReadOnly="True" rows="5" cols="50"></asp:TextBox>
+                    
                 </td>
             </tr>
             <tr>
