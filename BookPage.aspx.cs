@@ -118,7 +118,6 @@ namespace BookHomePage
 
                 ltrGenre.Text = s;
 
-                int rCount = 0;
                 string queryReccommend1 = "select * from books b, category c where b.id = c.id and b.id <> " + id.ToString();
 
                 string[] genreArr = ktg.ToArray();
@@ -133,24 +132,64 @@ namespace BookHomePage
                 DataTable recTable = new DataTable();
                 recTable.Load(reader2);
 
+                string queryAuthor = "select * from books where book_authors ='" + author + "'";
+                OleDbCommand cmd2 = new OleDbCommand(queryAuthor, con);
+                DataTable authorTable = new DataTable();
+                OleDbDataReader authorReader = cmd2.ExecuteReader();
+                authorTable.Load(authorReader);
+
+                recTable.Merge(authorTable);
+
+                int imgCount = 0;
+                int rCount = 0;
+                int j = 0;
+                
 
                 while (rCount < 5)
                 {
-                    for (int i = 0; i < 5; i++)
+                    if (j < recTable.Rows.Count)
                     {
-                        if (i < recTable.Rows.Count)
+                        string bookimg = imgBook.ImageUrl;
+                        string img = recTable.Rows[j]["image_url"].ToString();
+                        if (bookimg != img)
                         {
-                            string img = recTable.Rows[i]["image_url"].ToString();
-                            recButtons[i].ImageUrl = img;
+                            recButtons[rCount].ImageUrl = img;
+                            imgCount++;
+                            rCount++;
+                            
                         }
-                        else
-                        {
-                            recButtons[i].Visible = false;
-                        }
+                        j++;
+                    }
+                    else
+                    {
+                        recButtons[rCount].Visible = false;
                         rCount++;
                     }
+
+                    
                 }
-                
+
+
+
+                //while (rCount < 5)
+                //{
+                //    for (int i = 0; i < 5; i++)
+                //    {
+                //        string bookimg = imgBook.ImageUrl;
+                //        string img = recTable.Rows[i]["image_url"].ToString();
+                //        if (i < recTable.Rows.Count && bookimg != img)
+                //        {
+                //            recButtons[i].ImageUrl = img;
+                //            imgCount++;
+                //        }
+                //        else
+                //        {
+                //            recButtons[i].Visible = false;
+                //        }
+                //        rCount++;
+                //    }
+                //}
+
 
             }
             catch (Exception exception)

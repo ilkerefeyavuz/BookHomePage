@@ -24,52 +24,7 @@
             }
         }
     </script>
-    <style type="text/css">
-        .button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  /*padding: 16px 32px;*/
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-.button5 {
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-}
-
-.button5:hover {
-  background-color: #555555;
-  color: white;
-}
-.buttonShadow {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.buttonShadow:hover {
-  box-shadow: 0 28px 36px 0 rgba(0,0,0,0.24),0 34px 100px 0 rgba(0,0,0,0.5);
-}
-        .auto-style1 {
-            width: 100%;
-            height: 319px;
-        }
-        .auto-style2 {
-            height: 38px;
-            width: 1378px;
-        }
-        .auto-style3 {
-            width: 100%;
-        }
-        .auto-style4 {
-            width: 1378px;
-        }
-    </style>
+    
 </head>
 <body>
         <form id="form1" runat="server">
@@ -104,19 +59,19 @@
                         <table class="auto-style3">
                             <tr>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton1" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click" />
+                                    <asp:ImageButton ID="ImageButton1" class="button buttonShadow" runat="server" Height="220px" Width="150px" OnClick="ImageButton_Click" />
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton2" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click" />
+                                    <asp:ImageButton ID="ImageButton2" class="button buttonShadow" runat="server" Height="220px" Width="150px" OnClick="ImageButton_Click" />
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton3" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                                    <asp:ImageButton ID="ImageButton3" class="button buttonShadow" runat="server" Height="220px" Width="150px" OnClick="ImageButton_Click"/>
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton4" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                                    <asp:ImageButton ID="ImageButton4" class="button buttonShadow" runat="server" Height="220px" Width="150px" OnClick="ImageButton_Click"/>
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton5" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                                    <asp:ImageButton ID="ImageButton5" class="button buttonShadow" runat="server" Height="220px" Width="150px" OnClick="ImageButton_Click"/>
                                 </td>
                             </tr>
                         </table>
