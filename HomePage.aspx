@@ -81,6 +81,10 @@
             width: 100%;
             padding-right: 3%;
         }
+        .auto-style6 {
+            width: 100%;
+            padding-left: 3%;
+        }
 
     </style>
 </head>
@@ -110,7 +114,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style4" align="center"> Recommendations:</td>
+                    <td class="auto-style6" align="left"> <br /> Recommendations:<br/></td>
                 </tr>
                 <tr>
                     <td class="auto-style4">
@@ -141,9 +145,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="auto-style4" align="center">
+                    <td colspan="1" class="auto-style6" align="left">
                         <br />
- Categories:</td>
+                        <br/>
+ Categories:<br/> </td>
                 </tr>
                 <tr>
                     <td colspan="1" align="center" class="auto-style4">

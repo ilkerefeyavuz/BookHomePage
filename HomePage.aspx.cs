@@ -16,11 +16,6 @@ namespace BookHomePage
                                                       Server.MapPath("booksDb.mdb") + ";Persist Security Info=False");
             return con;
 
-            /*
-             * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             */
 
         }
 
@@ -37,7 +32,8 @@ namespace BookHomePage
 
             if (ctgArray.Length == 0)
             {
-                query = "select * from books where book_rating_count > 100 order by book_rating desc";
+                //query = "select * from books where book_rating_count > 100 order by book_rating desc";
+                query = "select * from books where book_rating > 4.50 order by book_rating_count desc";
             }
             else
             {
