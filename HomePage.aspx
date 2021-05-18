@@ -37,7 +37,7 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-}
+        }
 .button5 {
   background-color: white;
   color: black;
@@ -75,8 +75,13 @@
             width: 100%;
         }
         .auto-style4 {
-            width: 1378px;
+            width: 100%;
         }
+        .auto-style5 {
+            width: 100%;
+            padding-right: 3%;
+        }
+
     </style>
 </head>
 <body>
@@ -87,25 +92,25 @@
         <div>
             <table class="auto-style3">
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Image ID="imgLogo" runat="server" Height="300px" ImageUrl="~/pasha.png"  Width="525px"   />
+                    <td align="center">
+                        <asp:Image ID="imgLogo" runat="server" ImageUrl="~/pasha.png"    />
                     </td>
                 </tr>
             </table>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style2"  align="center">
-                        <asp:TextBox ID="SearchBar" runat="server" Width="1290px" placeholder="Please Type the Book's Name..." OnTextChanged="SearchBar_TextChanged" ></asp:TextBox>
+                    <td class="auto-style5"  align="center">
+                        <asp:TextBox ID="SearchBar" runat="server" Width="75%" placeholder="Please Type the Book's Name..." OnTextChanged="SearchBar_TextChanged" Font-Size="18px"></asp:TextBox>
                         <asp:AutoCompleteExtender ServiceMethod="GetTitleList" MinimumPrefixLength="1"    
                                                   CompletionInterval="10" EnableCaching="false" CompletionSetCount="1" TargetControlID="SearchBar"    
                                                   ID="AutoCompleteExtender1" runat="server" FirstRowSelected="false" OnClientItemSelected="autoCompleteEx_ItemSelected">    
                         </asp:AutoCompleteExtender>  
 &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="BtnSearch" class="button button5" runat="server" Text="Search" Width="220px" OnClick="BtnSearch_Click" OnClientClick="searchRecommend(); return false" />
+                        <asp:Button ID="BtnSearch" class="button button5" runat="server" Text="Search" Width="15%" OnClick="BtnSearch_Click" OnClientClick="searchRecommend(); return false" />
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recommendations:</td>
+                    <td class="auto-style4" align="center"> Recommendations:</td>
                 </tr>
                 <tr>
                     <td class="auto-style4">
@@ -131,14 +136,14 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="1" align="right" class="auto-style4">
-                        <asp:Button ID="btnShowAll" class="button button5" runat="server" OnClick="btnShowAll_Click" Text="Show All Recommendations" Width="220px" />
+                    <td colspan="1" align="right" class="auto-style5">
+                        <asp:Button ID="btnShowAll" class="button button5" runat="server" OnClick="btnShowAll_Click" Text="Show All Recommendations" Width="16%"/>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="auto-style4">
+                    <td colspan="1" class="auto-style4" align="center">
                         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Categories:</td>
+ Categories:</td>
                 </tr>
                 <tr>
                     <td colspan="1" align="center" class="auto-style4">
@@ -171,8 +176,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="1" align="right" class="auto-style4">
-                        <asp:Button ID="Button1" class="button button5" runat="server" OnClick="Button1_Click" Text="Clear Choose" Width="220px" />
+                    <td colspan="1" align="right" class="auto-style5">
+                        <asp:Button ID="Button1" class="button button5" runat="server" OnClick="Button1_Click" Text="Clear Choose" Width="16%" />
                     </td>
                 </tr>
             </table>

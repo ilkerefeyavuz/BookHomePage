@@ -145,7 +145,7 @@
                 
                 <td class="auto-style5">Description:</td>
                 <td class="auto-style4">
-                    <asp:TextBox ID="txtDesc" runat="server" Height="120px" TextMode="MultiLine" Width="481px" ReadOnly="True" rows="5" cols="50"></asp:TextBox>
+                    <asp:TextBox ID="txtDesc" runat="server" BackColor="#f4f2e9" Height="100%" TextMode="MultiLine" Width="50%" ReadOnly="True" rows="5" cols="50" Font-Size="15px" BorderWidth="3px" BorderStyle="Solid" BorderColor="Black"></asp:TextBox>
                     
                 </td>
             </tr>
@@ -161,7 +161,7 @@
                 
                 <td class="auto-style6">
                 <td class="auto-style13">
-                    <asp:DropDownList ID="DropDownRate" runat="server">
+                    <asp:DropDownList ID="DropDownRate" runat="server" Font-Size="18px">
                         <asp:ListItem Value="0">--Points--</asp:ListItem>
                         <asp:ListItem Value="1">1</asp:ListItem>
                         <asp:ListItem Value="2">2</asp:ListItem>
@@ -170,9 +170,9 @@
                         <asp:ListItem Value="5">5</asp:ListItem>
                     </asp:DropDownList>
                     &nbsp;
-                    <asp:Button ID="btnRating" class="button button5" runat="server" OnClick="btnRating_Click" Text="Vote" Width="220px" />
+                    <asp:Button ID="btnRating" class="button button5" runat="server" OnClick="btnRating_Click" Text="Vote" Width="15%" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnHomepage" class="button button5" runat="server" OnClick="btnHomepage_Click" Text="Home Page" Width="220px" />
+                    <asp:Button ID="btnHomepage" class="button button5" runat="server" OnClick="btnHomepage_Click" Text="Home Page" Width="15%" />
                 </td>
             </tr>
         </table>

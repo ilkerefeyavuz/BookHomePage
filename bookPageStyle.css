@@ -1,11 +1,13 @@
 ﻿body {
-    position: fixed;
-    height: 100vw;
+    /*position: fixed;
+        height: 100vw;
     width: 120vw;
-    margin: 0px 0px 0px 15px;
+        margin: 0px 0px 0px 15px;
+    */
+    height: 150%;
     width: 100%;
+    margin-bottom: 3%;
     background-color: #f4f2e9;
     font-family: "Times New Roman", Times, serif;
-    font-size: 24px;
+    font-size: 18px;
 }
-
