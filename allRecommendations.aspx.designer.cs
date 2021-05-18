@@ -33,6 +33,15 @@ namespace BookHomePage
         protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
 
         /// <summary>
+        /// Image1 denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik üretilmiş alan.
+        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
+
+        /// <summary>
         /// ltrBookName1 denetimi.
         /// </summary>
         /// <remarks>

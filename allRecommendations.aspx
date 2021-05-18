@@ -44,6 +44,10 @@
         .table-style {
             width: 20%;
         }
+        .table-style2 {
+            width: 100%;
+            padding-right: 3%;
+        }
     </style>
 </head>
 <body>
@@ -52,7 +56,18 @@
             <table class="auto-style1">
                 <tr>
                     <td>
-                        <asp:ImageButton ID="ImageButton1" runat="server"  Height="42px" ImageUrl="~/home_icon.jpg" OnClick="ImageButton1_Click" Width="42px" />
+                        <table class="auto-style1">
+                            <tr>
+                                <td>
+                                    <asp:ImageButton ID="ImageButton1" runat="server"  Height="42px" ImageUrl="~/home_icon.jpg" OnClick="ImageButton1_Click" Width="42px" />
+                                </td>
+                                <td align="right" class="table-style2">
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="birdLogo.png" Height="50px" Width="50px"/>
+
+                                </td>
+                            </tr>
+                        </table>
+                       
                     </td>
                 </tr>
                 <tr>
