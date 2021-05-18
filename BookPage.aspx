@@ -134,7 +134,7 @@
                     <table class="auto-style11">
                         <tr>
                             <td align="center">
-                                <asp:Image ID="imgBook" runat="server" Height="300px" ImageUrl="https://images.gr-assets.com/books/1255614970l/2.jpg" Width="180px" />
+                                <asp:Image ID="imgBook" runat="server" Height="300px" Width="180px" />
                             </td>
                         </tr>
                     </table>
