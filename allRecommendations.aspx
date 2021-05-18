@@ -170,13 +170,13 @@
                 <tr>
                     <td align="center">
                         <br />
-                        <asp:Button ID="ButtonFirst" class="button button5" runat="server" Height="36px" Text="<<" Width="31px" OnClick="ButtonFirst_Click"/>
-                        <asp:Button ID="Button1" class="button button5" runat="server" Height="36px" Text="11" Width="31px" OnClick="PageButtons_Click"/>
-                        <asp:Button ID="Button2" class="button button5" runat="server" Height="36px" Text="12" Width="31px" OnClick="PageButtons_Click"/>
-                        <asp:Button ID="Button3" class="button button5" runat="server" Height="36px" Text="13" Width="31px" OnClick="PageButtons_Click"/>
-                        <asp:Button ID="Button4" class="button button5" runat="server" Height="36px" Text="14" Width="31px" OnClick="PageButtons_Click"/>
-                        <asp:Button ID="Button5" class="button button5" runat="server" Height="36px" Text="15" Width="31px" OnClick="PageButtons_Click"/>
-                        <asp:Button ID="ButtonLast" class="button button5" runat="server" Height="36px" Text=">>" Width="31px" OnClick="ButtonLast_Click"/>
+                        <asp:Button ID="ButtonFirst" class="button button5" runat="server" Height="36px" Text="<<" Width="50px" OnClick="ButtonFirst_Click"/>
+                        <asp:Button ID="Button1" class="button button5" runat="server" Height="36px" Text="11" Width="50px" OnClick="PageButtons_Click"/>
+                        <asp:Button ID="Button2" class="button button5" runat="server" Height="36px" Text="12" Width="50px" OnClick="PageButtons_Click"/>
+                        <asp:Button ID="Button3" class="button button5" runat="server" Height="36px" Text="13" Width="50px" OnClick="PageButtons_Click"/>
+                        <asp:Button ID="Button4" class="button button5" runat="server" Height="36px" Text="14" Width="50px" OnClick="PageButtons_Click"/>
+                        <asp:Button ID="Button5" class="button button5" runat="server" Height="36px" Text="15" Width="50px" OnClick="PageButtons_Click"/>
+                        <asp:Button ID="ButtonLast" class="button button5" runat="server" Height="36px" Text=">>" Width="50px" OnClick="ButtonLast_Click"/>
                     </td>
                 </tr>
             </table>
