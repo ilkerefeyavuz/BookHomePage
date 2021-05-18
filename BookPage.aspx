@@ -155,9 +155,9 @@ textarea {
                         <asp:ListItem Value="5">5</asp:ListItem>
                     </asp:DropDownList>
                     &nbsp;
-                    <asp:Button ID="btnRating" class="button button5" runat="server" OnClick="btnRating_Click" Text="Rating" />
+                    <asp:Button ID="btnRating" class="button button5" runat="server" OnClick="btnRating_Click" Text="Vote" Width="220px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnHomepage" class="button button5" runat="server" OnClick="btnHomepage_Click" Text="Home Page" />
+                    <asp:Button ID="btnHomepage" class="button button5" runat="server" OnClick="btnHomepage_Click" Text="Home Page" Width="220px" />
                 </td>
             </tr>
         </table>

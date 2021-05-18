@@ -55,6 +55,14 @@
 .buttonShadow:hover {
   box-shadow: 0 28px 36px 0 rgba(0,0,0,0.24),0 34px 100px 0 rgba(0,0,0,0.5);
 }
+.alignCenter
+{
+    margin: 0 auto;
+}
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+        
         .auto-style1 {
             width: 100%;
             height: 319px;
@@ -80,7 +88,7 @@
             <table class="auto-style3">
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Image ID="imgLogo" runat="server" Height="145px" ImageUrl="~/birdLogo.png" Width="262px" style="margin-left: 660px" />
+                        <asp:Image ID="imgLogo" runat="server" Height="300px" ImageUrl="~/pasha.png"  Width="525px"   />
                     </td>
                 </tr>
             </table>
@@ -93,7 +101,7 @@
                                                   ID="AutoCompleteExtender1" runat="server" FirstRowSelected="false" OnClientItemSelected="autoCompleteEx_ItemSelected">    
                         </asp:AutoCompleteExtender>  
 &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="BtnSearch" class="button button5" runat="server" Text="Search" Width="149px" OnClick="BtnSearch_Click" OnClientClick="searchRecommend(); return false" />
+                        <asp:Button ID="BtnSearch" class="button button5" runat="server" Text="Search" Width="220px" OnClick="BtnSearch_Click" OnClientClick="searchRecommend(); return false" />
                     </td>
                 </tr>
                 <tr>
@@ -124,7 +132,7 @@
                 </tr>
                 <tr>
                     <td colspan="1" align="right" class="auto-style4">
-                        <asp:Button ID="btnShowAll" class="button button5" runat="server" OnClick="btnShowAll_Click" Text="Show All Recommendations" Width="213px" />
+                        <asp:Button ID="btnShowAll" class="button button5" runat="server" OnClick="btnShowAll_Click" Text="Show All Recommendations" Width="220px" />
                     </td>
                 </tr>
                 <tr>
@@ -164,7 +172,7 @@
                 </tr>
                 <tr>
                     <td colspan="1" align="right" class="auto-style4">
-                        <asp:Button ID="Button1" class="button button5" runat="server" OnClick="Button1_Click" Text="Clear Choose" />
+                        <asp:Button ID="Button1" class="button button5" runat="server" OnClick="Button1_Click" Text="Clear Choose" Width="220px" />
                     </td>
                 </tr>
             </table>

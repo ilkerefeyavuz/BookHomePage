@@ -49,7 +49,7 @@
             <table class="auto-style1">
                 <tr>
                     <td>
-                        <asp:ImageButton ID="ImageButton1" runat="server"  Height="40px" ImageUrl="~/homePageLogo.png" OnClick="ImageButton1_Click" Width="60px" />
+                        <asp:ImageButton ID="ImageButton1" runat="server"  Height="80px" ImageUrl="~/home_icon.jpg" OnClick="ImageButton1_Click" Width="80px" />
                     </td>
                 </tr>
                 <tr>

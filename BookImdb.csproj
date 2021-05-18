@@ -79,8 +79,10 @@
     <Content Include="BookPage.aspx" />
     <Content Include="homePageLogo.png" />
     <Content Include="homePageStyle.css" />
+    <Content Include="home_icon.jpg" />
     <Content Include="hpLOGO.png" />
     <Content Include="logo_hd.jpg" />
+    <Content Include="pasha.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

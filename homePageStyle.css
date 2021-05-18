@@ -4,4 +4,7 @@
     margin: 10px 10px 10px -15px;
     background-color: #f4f2e9;
     position: fixed;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
 }
