@@ -9,79 +9,94 @@
     <title></title>
     <style type="text/css">
         .button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  /*padding: 16px 32px;*/
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-.button5 {
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-}
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            /*padding: 16px 32px;*/
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
 
-.button5:hover {
-  background-color: #555555;
-  color: white;
-}
-.buttonShadow {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
+        .button5 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
 
-.buttonShadow:hover {
-  box-shadow: 0 28px 36px 0 rgba(0,0,0,0.24),0 34px 100px 0 rgba(0,0,0,0.5);
-}
-textarea {
-        resize: none;
-    }
+        .button5:hover {
+            background-color: #555555;
+            color: white;
+        }
+
+        .buttonShadow {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .buttonShadow:hover {
+            box-shadow: 0 28px 36px 0 rgba(0,0,0,0.24),0 34px 100px 0 rgba(0,0,0,0.5);
+        }
+
+        textarea {
+            resize: none;
+        }
+
         .auto-style2 {
             width: 100%;
         }
+
         .auto-style4 {
             height: 26px;
             width: 1517px;
         }
+
         .auto-style5 {
             width: 101px;
             height: 26px;
         }
+
         .auto-style6 {
             height: 39px;
         }
+
         .auto-style7 {
             width: 101px;
             height: 39px;
         }
+
         .auto-style8 {
             height: 38px;
             width: 1517px;
         }
+
         .auto-style9 {
             width: 101px;
             height: 38px;
         }
+
         .auto-style10 {
             height: 38px;
             width: 190px;
         }
+
         .auto-style11 {
             width: 100%;
             height: 187px;
         }
+
         .auto-style12 {
             height: 39px;
             width: 1517px;
         }
+
         .auto-style13 {
             width: 1517px;
         }
+
         .auto-style14 {
             height: 26px;
         }

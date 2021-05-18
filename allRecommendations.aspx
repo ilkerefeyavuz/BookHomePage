@@ -9,37 +9,40 @@
     <title></title>
     <style type="text/css">
         .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  /*padding: 16px 32px;*/
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-.button5 {
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-}
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            /*padding: 16px 32px;*/
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .button5 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
 
-.button5:hover {
-  background-color: #555555;
-  color: white;
-}
-.buttonShadow {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
+        .button5:hover {
+            background-color: #555555;
+            color: white;
+        }
+        .buttonShadow {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
 
-.buttonShadow:hover {
-  box-shadow: 0 28px 36px 0 rgba(0,0,0,0.24),0 34px 100px 0 rgba(0,0,0,0.5);
-}
+        .buttonShadow:hover {
+            box-shadow: 0 28px 36px 0 rgba(0,0,0,0.24),0 34px 100px 0 rgba(0,0,0,0.5);
+        }
         .auto-style1 {
             width: 100%;
+        }
+        .table-style {
+            width: 20%;
         }
     </style>
 </head>
@@ -56,39 +59,39 @@
                     <td>
                         <table class="auto-style1">
                             <tr>
-                                <td align="center">
+                                <td align="center" class="table-style">
                                     <br />
                                     <asp:Literal ID="ltrBookName1" runat="server" Text="Book1"></asp:Literal>
                                     <br />
                         <asp:ImageButton ID="ImageButton2" runat="server" class="button buttonShadow" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
-                                <td align="center">
+                                <td align="center" class="table-style">
                                     <br />
                                     <asp:Literal ID="ltrBookName2" runat="server" Text="Book2"></asp:Literal>
                                     <br />
                         <asp:ImageButton ID="ImageButton3" runat="server" class="button buttonShadow" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
-                                <td align="center">
+                                <td align="center" class="table-style">
                                     <br />
                                     <asp:Literal ID="ltrBookName3" runat="server" Text="Book3"></asp:Literal>
                                     <br />
                         <asp:ImageButton ID="ImageButton4" runat="server" class="button buttonShadow" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
-                                <td align="center">
+                                <td align="center" class="table-style">
                                     <br />
-                                    <asp:Literal ID="ltrBookName4" runat="server" Text="Book4"></asp:Literal>
+                                    <asp:Literal ID="ltrBookName4" runat="server" Text="Book4" ></asp:Literal>
                                     <br />
                         <asp:ImageButton ID="ImageButton5" runat="server" class="button buttonShadow" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
-                                <td align="center">
+                                <td align="center" class="table-style">
                                     <br />
-                                    <asp:Literal ID="ltrBookName5" runat="server" Text="Book5"></asp:Literal>
+                                    <asp:Literal ID="ltrBookName5" runat="server" Text="Book5" ></asp:Literal>
                                     <br />
                         <asp:ImageButton ID="ImageButton6" runat="server" class="button buttonShadow" Height="200px" Width="150px" OnClick="ImageButtons_Click" />
                                 </td>
                             </tr>
                             <tr>
-                                <td align="center">
+                                <td align="center" class="table-style">
                                     <br />
                                     <br />
                                     <asp:Literal ID="ltrBookName6" runat="server" Text="Book6"></asp:Literal>

@@ -112,19 +112,19 @@
                         <table class="auto-style3">
                             <tr>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton1" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click" />
+                                    <asp:ImageButton ID="ImageButton1" class="button buttonShadow" runat="server" Height="220px" Width="150px" OnClick="ImageButton_Click" />
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton2" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click" />
+                                    <asp:ImageButton ID="ImageButton2" class="button buttonShadow" runat="server" Height="220px" Width="150px" OnClick="ImageButton_Click" />
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton3" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                                    <asp:ImageButton ID="ImageButton3" class="button buttonShadow" runat="server" Height="220px" Width="150px" OnClick="ImageButton_Click"/>
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton4" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                                    <asp:ImageButton ID="ImageButton4" class="button buttonShadow" runat="server" Height="220px" Width="150px" OnClick="ImageButton_Click"/>
                                 </td>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton5" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
+                                    <asp:ImageButton ID="ImageButton5" class="button buttonShadow" runat="server" Height="220px" Width="150px" OnClick="ImageButton_Click"/>
                                 </td>
                             </tr>
                         </table>
