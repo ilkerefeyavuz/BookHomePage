@@ -183,6 +183,7 @@
                 <tr>
                     <td colspan="1" align="right" class="auto-style5">
                         <asp:Button ID="Button1" class="button button5" runat="server" OnClick="Button1_Click" Text="Clear Choose" Width="16%" />
+                        <asp:Button ID="btnShowCtg" class="button button5" runat="server" OnClick="btnShowAll_Click" Text="Show" Width="16%"/>
                     </td>
                 </tr>
             </table>

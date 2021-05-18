@@ -100,11 +100,21 @@
         .auto-style14 {
             height: 26px;
         }
+        .auto-style15 {
+            width: 228px;
+        }
     </style>
 </head>
 <body>
     
         <form id="form1" runat="server">
+        <table class="auto-style2">
+            <tr>
+                <td>
+                    <asp:ImageButton ID="HomeImgButton" runat="server" Height="42px" ImageUrl="~/home_icon.jpg" OnClick="HomeImgButton_Click" Width="42px" />
+                </td>
+            </tr>
+        </table>
         <table class="auto-style2">
             <tr>
                 <td class="auto-style10" rowspan="5">
@@ -186,7 +196,7 @@
         </table>
         <table class="auto-style2">
             <tr>
-                <td align="center">
+                <td align="center" class="auto-style15">
                     <asp:ImageButton ID="RecBook1" class="button buttonShadow" runat="server" Height="250px" Width="150px" OnClick="ImageButton_Click"/>
                 </td>
                 <td align="center">

@@ -289,5 +289,10 @@ namespace BookHomePage
             Response.Redirect("BookPage.aspx?id=" + id);
 
         }
+
+        protected void HomeImgButton_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+        }
     }
 }
