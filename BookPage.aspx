@@ -146,7 +146,7 @@
                     <div class="tooltip">
                         <asp:Image ID="Image1" runat="server" Height="50px" Width="50px" ImageUrl="birdLogo.png" />
                         <span class="tooltiptext"> Coded by <br />
-                            Ilker Efe Yavuz <br />
+                            İlker Efe Yavuz <br />
                             Hasan Atakan Ergür <br />
                             Özcan Özan 
                            
