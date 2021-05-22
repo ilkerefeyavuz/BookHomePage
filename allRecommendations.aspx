@@ -48,6 +48,30 @@
             width: 100%;
             padding-right: 3%;
         }
+                .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  top: -5px;
+  right: 105%;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
     </style>
 </head>
 <body>
@@ -62,9 +86,18 @@
                                     <asp:ImageButton ID="ImageButton1" runat="server"  Height="42px" ImageUrl="~/home_icon.jpg" OnClick="ImageButton1_Click" Width="42px" />
                                 </td>
                                 <td align="right" class="table-style2">
-                                    <asp:Image ID="Image1" runat="server" ImageUrl="birdLogo.png" Height="50px" Width="50px"/>
-
-                                </td>
+                    <div class="tooltip">
+                        <asp:Image ID="Image1" runat="server" Height="50px" Width="50px" ImageUrl="birdLogo.png" />
+                        <span class="tooltiptext"> Coded by <br />
+                            Ilker Efe Yavuz <br />
+                            Hasan Atakan Ergür <br />
+                            Özcan Özan 
+                           
+                        </span>
+                    </div>
+                    
+                      
+                </td>
                             </tr>
                         </table>
                        
