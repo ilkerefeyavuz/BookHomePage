@@ -32,7 +32,8 @@ namespace BookHomePage
 
             if (searchStr != null)
             {
-                query = "select * from books where book_title like '%" + searchStr + "%' order by book_rating desc";
+                //query = "select * from books where book_title like '%" + searchStr + "%' order by book_rating desc";
+                query = "select * from books where book_title like '%" + searchStr + "%' order by book_rating_count desc";
                 //string querySearch = "";
                 //if (categories != null)
                 //{
@@ -59,25 +60,19 @@ namespace BookHomePage
                 }
 
                 //query += queryString ;
+                //query = "select * from books b, category c where b.id=c.id " + queryString +
+                //               "order by book_rating desc, book_rating_count";
                 query = "select * from books b, category c where b.id=c.id " + queryString +
-                               "order by book_rating desc, book_rating_count";
+                        "order by book_rating_count desc";
+
                 //string query = "select * from books b, category c where b.id=c.id and c.Young_Adult=1";
             }
             
             else if(author != null)
             {
-                query = "select * from books where book_authors='" + author + "' order by book_rating desc";
-                //string queryAuthor = "";
-                //if (categories != null || searchStr != null)
-                //{
-                //    queryAuthor = " and";
-                //}
-
-                //queryAuthor += " where book_authors='" + author + "'";
-                //query += queryAuthor;
+                //query = "select * from books where book_authors='" + author + "' order by book_rating desc";
+                query = "select * from books where book_authors='" + author + "' order by book_rating_count desc";
             }
-
-            //query += " order by book_rating desc";
 
 
             OleDbCommand cmd = new OleDbCommand(query, con);
@@ -191,56 +186,12 @@ namespace BookHomePage
             }
 
         }
-        protected string[] SelectedCategories()
-        {
-            string categories = Request.QueryString["ctg"];
-            string[] ctgArray;
-            if (categories == null)
-            {
-                ctgArray = new string[] {};
-            }
-            else
-            {
-                ctgArray = categories.Split('_');
-            }
-            
-            return ctgArray;
-        }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("HomePage.aspx");
         }
-        public int GetImageButtonIndex(ImageButton imgbtn)
-        {
-            ImageButton[] imageButtons = {
-                ImageButton2, ImageButton3, ImageButton4, ImageButton5, ImageButton6, ImageButton7,
-                ImageButton8, ImageButton9, ImageButton10, ImageButton11, ImageButton12, ImageButton13,
-                ImageButton14, ImageButton15, ImageButton16};
 
-            for (int i = 0; i < imageButtons.Length; i++)
-            {
-                if (imageButtons[i] == imgbtn)
-                {
-                    return i;
-                }
-            }
-            return -1;
-        }
-
-        //public int GetId(string ImgUrl) 
-        //{
-        //    OleDbConnection con = GetConnection();
-        //    string query = "select id from books where image_url=" + ImgUrl;
-        //    DataTable dataTable = new DataTable();
-        //    OleDbCommand cmd = new OleDbCommand(query, con);
-        //    OleDbDataReader reader = cmd.ExecuteReader();
-        //    dataTable.Load(reader);
-        //    var data = dataTable.Rows[0]["id"];
-        //    int id = (int)data;
-        //    con.Close();
-        //    return 0;
-        //}
 
         public int GetId(string url)
         {
@@ -298,6 +249,12 @@ namespace BookHomePage
                 b = part2[1];
                 newPage = a + "&pn=" + pn + "&search=" + b;
             }
+            else if (absoluteurl.Contains("a="))
+            {
+                part2 = absoluteurl.Split(new[] { "a=" }, StringSplitOptions.None);
+                b = part2[1];
+                newPage = a + "&pn=" + pn + "&a=" + b;
+            }
 
             Response.Redirect(newPage);
 
@@ -308,10 +265,28 @@ namespace BookHomePage
             string absoluteurl = HttpContext.Current.Request.Url.AbsoluteUri;
             string[] part1 = absoluteurl.Split(new[] { "pn=" }, StringSplitOptions.None);
             string a = part1[0];
-            string[] part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
-            string b = part2[1];
+            string[] part2 = { };
+            string b = "";
+            string newPage = "";
+            if (absoluteurl.Contains("ctg="))
+            {
+                part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
+                b = part2[1];
+                newPage = a + "&pn=" + 1 + "&ctg=" + b;
+            }
+            if (absoluteurl.Contains("search="))
+            {
+                part2 = absoluteurl.Split(new[] { "search=" }, StringSplitOptions.None);
+                b = part2[1];
+                newPage = a + "&pn=" + 1 + "&search=" + b;
+            }
+            if (absoluteurl.Contains("a="))
+            {
+                part2 = absoluteurl.Split(new[] { "a=" }, StringSplitOptions.None);
+                b = part2[1];
+                newPage = a + "&pn=" + 1 + "&a=" + b;
+            }
 
-            string newPage = a + "&pn=" + 1 + "&ctg=" + b;
 
             Response.Redirect(newPage);
         }
@@ -321,16 +296,44 @@ namespace BookHomePage
             string absoluteurl = HttpContext.Current.Request.Url.AbsoluteUri;
             string[] part1 = absoluteurl.Split(new[] { "pn=" }, StringSplitOptions.None);
             string a = part1[0];
-            string[] part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
-            string b = part2[1];
 
             var pn = Session["totalPageNumber"];
-            int pageNo = (int) pn;
+            int pageNo = (int)pn;
+            string[] part2 = { };
+            string b = "";
+            string newPage = "";
+            if (absoluteurl.Contains("ctg="))
+            {
+                part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
+                b = part2[1];
+                newPage = a + "&pn=" + pageNo + "&ctg=" + b;
+            }
+            if (absoluteurl.Contains("search="))
+            {
+                part2 = absoluteurl.Split(new[] { "search=" }, StringSplitOptions.None);
+                b = part2[1];
+                newPage = a + "&pn=" + pageNo + "&search=" + b;
+            }
+            if (absoluteurl.Contains("a="))
+            {
+                part2 = absoluteurl.Split(new[] { "a=" }, StringSplitOptions.None);
+                b = part2[1];
+                newPage = a + "&pn=" + pageNo + "&a=" + b;
+            }
 
-            //string newPage = a + "&pn=" + (TotalPage) + "&ctg=" + b;
-            string newPage = a + "&pn=" + pageNo + "&ctg=" + b;
 
             Response.Redirect(newPage);
+
+            //string[] part2 = absoluteurl.Split(new[] { "ctg=" }, StringSplitOptions.None);
+            //string b = part2[1];
+
+            //var pn = Session["totalPageNumber"];
+            //int pageNo = (int) pn;
+
+            ////string newPage = a + "&pn=" + (TotalPage) + "&ctg=" + b;
+            //string newPage = a + "&pn=" + pageNo + "&ctg=" + b;
+
+            //Response.Redirect(newPage);
         }
     }
 }

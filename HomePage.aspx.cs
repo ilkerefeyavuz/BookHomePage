@@ -47,9 +47,7 @@ namespace BookHomePage
             }
 
 
-            string q = "select * from books b, category c where b.Id = c.Id and c.fantasy = 1";
             OleDbCommand cmd = new OleDbCommand(query, con);
-            Console.WriteLine(query);
 
             try
             {
@@ -57,9 +55,6 @@ namespace BookHomePage
                 OleDbDataReader reader = cmd.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
-
-                // var title = dataTable.Rows[0]["book_title"].ToString();
-
 
                 for (int i = 0; i < images.Length; i++)
                 {
@@ -154,24 +149,6 @@ namespace BookHomePage
             Response.Redirect("allRecommendations.aspx?pn=1&ctg=" + s);
         }
 
-        public int GetImageButtonIndex(ImageButton imgbtn)
-        {
-            ImageButton[] imageButtons =
-            {
-                ImageButton1, ImageButton1, ImageButton3, ImageButton4, ImageButton5,
-                
-            };
-
-            for (int i = 0; i < imageButtons.Length; i++)
-            {
-                if (imageButtons[i] == imgbtn)
-                {
-                    return i;
-                }
-            }
-
-            return -1;
-        }
 
         public int GetId(string url)
         {

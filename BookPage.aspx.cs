@@ -93,12 +93,6 @@ namespace BookHomePage
                         string sa = a.Trim().Replace("_", " ");
                         string nsa = "<a href='allRecommendations.aspx?&pn=1&ctg=" + sa + "'>" + sa +"</a>";
                         list.Add(nsa);
-                        //HyperLink hp1 = new HyperLink();
-                        //hp1.Text = sa;
-                        //hp1.NavigateUrl = "allRecommendations.aspx? ctg = " + sa;
-                        
-                        //list.Add(hp1);
-                        //s = s + a + ", ";
                     }
                 }
 
@@ -169,28 +163,6 @@ namespace BookHomePage
                     
                 }
 
-
-
-                //while (rCount < 5)
-                //{
-                //    for (int i = 0; i < 5; i++)
-                //    {
-                //        string bookimg = imgBook.ImageUrl;
-                //        string img = recTable.Rows[i]["image_url"].ToString();
-                //        if (i < recTable.Rows.Count && bookimg != img)
-                //        {
-                //            recButtons[i].ImageUrl = img;
-                //            imgCount++;
-                //        }
-                //        else
-                //        {
-                //            recButtons[i].Visible = false;
-                //        }
-                //        rCount++;
-                //    }
-                //}
-
-
             }
             catch (Exception exception)
             {
@@ -215,9 +187,6 @@ namespace BookHomePage
             {
                 OleDbConnection con = GetConnection();
                 var id = Request.QueryString["id"];
-                //string query = "Insert Into books(book_rating, book_rating_count)" +
-                //               " Values( @br, @brc) where id=" + id.ToString() + ";";
-                //OleDbCommand cmd = new OleDbCommand(query, con);
                 var drating = Session["rating"];
                 var dratingcount = Session["rating_count"];
                 double rating = (double)drating;

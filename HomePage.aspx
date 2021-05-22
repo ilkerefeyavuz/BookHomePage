@@ -175,7 +175,6 @@
                             <asp:ListItem>Religion</asp:ListItem>
                             <asp:ListItem>Music</asp:ListItem>
                             <asp:ListItem>Self Help</asp:ListItem>
-                            <asp:ListItem>Business</asp:ListItem>
                             <asp:ListItem>Urban</asp:ListItem>
                         </asp:CheckBoxList>
                     </td>
